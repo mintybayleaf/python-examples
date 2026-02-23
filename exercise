@@ -1,0 +1,6 @@
+#!/bin/bash
+
+EXERCISE="$1"
+ARGS="$@"
+
+python "./${EXERCISE}/exercise.py" "${@:2}"
