@@ -12,13 +12,14 @@ def parse_num(number):
 
 
 def convert(number):
+    if number == 0:
+        return BASE16[0]
+
     characters = []
     while number > 0:
         remainder = number % 16
         number = number // 16
         characters.append(BASE16[remainder])
-    else:
-        characters.append("0")
 
     return "".join(reversed(characters))
 
